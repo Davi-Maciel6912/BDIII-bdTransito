@@ -1,0 +1,40 @@
+USE bdTransito
+
+INSERT INTO tbMotorista(nomeMotorista, dataNascimentoMotorista, cpfMotorista, CNHMotorista, pontuacaoAcumulada)
+VALUES ('Casio Amadeus', '1993', '12345678900221', '12341542312365', 40)
+	, ('Fernando Silva', '1999', '98765432119283', '19876345612876', 30)
+	, ('Valéria Cardoso', '1997', '57429636547641', '98351994132987', 30)
+SELECT * FROM tbMotorista
+
+INSERT INTO tbVeiculo(modeloVeiculo,placaVeiculo,renavamVeiculo,anoVeiculo,idMotorista)
+VALUES ('Audi A1','HFRN930','84923748375','2018',3)
+	, ('Audi Q3','UJFN365','84398457483','2020',3)
+	, ('Audi R8','JHFN287','87345682913','2019',3)
+	, ('Bugatti Veyron','JNDE675','65386462453','2018',2)
+	, ('Bugatti Chiron','YEND746','84637584912','2021',2)
+	, ('Bugatti Centodieci','IDND746','74653654673','2020',2)
+	, ('Chevrolet Agile', 'FY7U9D8', '91918273019','2019', 1)
+	, ('Chevrolet Bolt', 'HA8IJ19', '21789015432','2018', 1)
+	, ('Chevrolet Astro', 'GTY78U9', '10294377514','2020', 1)
+SELECT * FROM tbVeiculo
+
+INSERT INTO tbMulta(dataMulta, horaMulta, pontosMulta, idVeiculo)
+VALUES ('17/06/2019','14:37', 4, 1)
+    , ('09/08/2019','10:18', 2, 1)
+    , ('11/03/2021', '21:47', 2, 2)
+    , ('21/10/2021', '12:01', 3, 2)
+    , ('09/11/2019', '11:21',2,3)
+    , ('06/12/2022', '10:12',8,3)
+    , ('02/08/2022', '22:24',2,4)
+    , ('13/05/2022', '18:13',6,4)
+    , ('12/10/2019', '11:21',2,5)
+    , ('06/12/2022', '15:12',8,5)
+    , ('02/08/2022', '22:24',2,6)
+    , ('19/05/2022', '17:13',6,6)
+    , ('09/11/2019', '11:21',2,7)
+    , ('01/04/2022', '10:12',12,7)
+    , ('13/07/2022', '22:24',1,8)
+    , ('17/09/2022', '18:13',6,8)
+    , ('25/02/2022', '22:54',7,9)
+    , ('29/03/2022', '18:22',4,9)
+SELECT * FROM tbMulta
